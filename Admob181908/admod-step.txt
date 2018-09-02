@@ -2,6 +2,7 @@
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 compile 'com.google.android.gms:play-services-ads:10.2.1'
+implementation 'com.google.android.gms:play-services-ads:15.0.1'
 
 <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
