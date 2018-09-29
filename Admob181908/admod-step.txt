@@ -1,23 +1,22 @@
+======== SỬA APPLICATION ID TRONG BUILD GRADE
+======== SỬA TÊN APP TRONG string
+======== Thêm icon vào draweble
+
+======== THÊM VÀO MANIFEST
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
-compile 'com.google.android.gms:play-services-ads:10.2.1'
+ ======== THÊM VÀO BUILD GRADE
 implementation 'com.google.android.gms:play-services-ads:15.0.1'
 
-<com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-xxxxxxxxxxxxxxx/xxxxxxxxx.">
-    </com.google.android.gms.ads.AdView>
-	
+ ======== THÊM VÀO MAIN APPLICATION
+
 	AdView mAdView = (AdView) findViewById(R.id.adView);
 AdRequest adRequest = new AdRequest.Builder().build();
 mAdView.loadAd(adRequest);
 
+ ======== THÊM VÀO active_main.xml
+ 
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -59,14 +58,14 @@ mAdView.loadAd(adRequest);
         android:layout_height="wrap_content"
         android:text="Tim Kiem" />
 
-    <!--<com.google.android.gms.ads.AdView-->
-        <!--android:id="@+id/adView"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--ads:adSize="BANNER"-->
-        <!--ads:adUnitId="ca-app-pub-xxxxxxxxxxxxxxx/xxxxxxxxx."></com.google.android.gms.ads.AdView>-->
+    <com.google.android.gms.ads.AdView
+	    android:id="@+id/adView"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    ads:adSize="BANNER"
+	    ads:adUnitId="ca-app-pub-5694746146518464/5563866181"></com.google.android.gms.ads.AdView>
 
 </LinearLayout>
 
