@@ -14,8 +14,11 @@ implementation 'com.google.android.gms:play-services-ads:15.0.1'
 	   AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.mp3);
-        mediaPlayer.start();
+    	//nếu làm app có phát âm thanh
+        MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.play);
+	//play  là file âm thanh, trong thư mục raw, phải tạo thư mục raw, đồng cấp với drawable và đưa file âm thanh đuôi 	   //mp3 vào,
+        // đổi tên cho đơn giản, phải bắt đầu bằng chữ
+        mediaPlayer.start(); //
 
  ======== THÊM VÀO active_main.xml
  
